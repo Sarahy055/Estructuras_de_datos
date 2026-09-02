@@ -453,7 +453,47 @@ python crear_matriz.py
 
 Este programa genera nuevamente la matriz con las dimensiones establecidas y verifica que el tamaño del archivo generado coincida con el tamaño esperado. De esta manera, aunque el archivo binario no se encuentre almacenado en GitHub, puede ser reproducido a partir del código incluido en el repositorio.
 
-# 20. Problemas que resuelve la solución
+# 20. ¿Por qué la matriz puede considerarse de dos dimensiones?
+
+Aunque el archivo físicamente está almacenado de forma secuencial, conceptualmente se interpreta como una matriz mediante sus dimensiones:
+100.000 filas
+100.000 columnas
+
+```
+Cada grupo de:
+100.000 bits
+```
+corresponde a una fila.
+
+
+La posición de un elemento puede determinarse mediante su fila y columna.
+La estructura lógica es:
+
+
+```
+              columnas
+        0       1       2       ...    99999
+     ┌─────────────────────────────────────────
+  0  │ 0       0       1       ...       0
+  1  │ 1       0       0       ...       1
+  2  │ 0       1       0       ...       0
+... │ ...
+99999│ 0       0       1       ...       0
+```
+
+
+Mientras que físicamente en el disco se encuentra de manera secuencial:
+
+Fila 0
+Fila 1
+Fila 2
+...
+Fila 99999
+
+La combinación de las dimensiones y el cálculo de posiciones permite interpretar esa secuencia como una matriz.
+
+
+# 21. Problemas que resuelve la solución
 
 ## Consumo excesivo de RAM
 

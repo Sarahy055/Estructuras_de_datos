@@ -6,9 +6,7 @@
 
 El objetivo de este laboratorio es resolver el problema de crear, almacenar, manipular y leer una matriz de **100.000 filas por 100.000 columnas**, teniendo en cuenta principalmente el consumo de memoria RAM, la velocidad de escritura en disco y la eficiencia durante la lectura de los datos.
 
-Una matriz de estas dimensiones contiene:
-
-100.000 × 100.000 = 10.000.000.000 elementos
+Una matriz de estas dimensiones contiene: 100.000 × 100.000 = 10.000.000.000 elementos
 
 Es decir, contiene **10 mil millones de elementos**.
 

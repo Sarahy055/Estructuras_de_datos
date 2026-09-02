@@ -431,7 +431,7 @@ python crear_matriz.py
 
 Este programa genera nuevamente la matriz con las dimensiones establecidas y verifica que el tamaño del archivo generado coincida con el tamaño esperado. De esta manera, aunque el archivo binario no se encuentre almacenado en GitHub, puede ser reproducido a partir del código incluido en el repositorio.
 
-# 20. Problemas que resuelve la solución
+# 19. Problemas que resuelve la solución
 
 ## Consumo excesivo de RAM
 
@@ -459,7 +459,7 @@ archivo.seek(posicion)
 Esto permite acceder directamente a la zona del archivo que se necesita. No es necesario recorrer ni cargar las filas anteriores.
 
 
-#Conclusión
+# Conclusión
 
 La solución representa una matriz de **100.000 × 100.000** utilizando una estructura binaria compacta, donde cada elemento ocupa solamente un bit.
 

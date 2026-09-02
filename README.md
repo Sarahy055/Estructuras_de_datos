@@ -22,16 +22,12 @@ Por esta razón, la solución utiliza una representación binaria en la que cada
 El repositorio contiene los siguientes archivos:
 
 - Laboratorio1/
-- 
-crear_matriz.py
--
-leer_matriz.py
--
-README.md
--
-matriz_100000x100000.bin
--
-region_matriz.txt
+-crear_matriz.py
+-leer_matriz.py
+-README.md
+-.gitignore
+-matriz_100000x100000.bin
+-region_matriz.txt
 
 
 ### `crear_matriz.py`

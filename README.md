@@ -459,14 +459,10 @@ Aunque el archivo físicamente está almacenado de forma secuencial, conceptualm
 100.000 filas
 100.000 columnas
 
-```
-Cada grupo de:
-100.000 bits
-```
-corresponde a una fila.
-
+Cada grupo de: 100.000 bits corresponde a una fila.
 
 La posición de un elemento puede determinarse mediante su fila y columna.
+
 La estructura lógica es:
 
 
@@ -477,7 +473,7 @@ La estructura lógica es:
   0  │ 0       0       1       ...       0
   1  │ 1       0       0       ...       1
   2  │ 0       1       0       ...       0
-... │ ...
+ ... │ ...
 99999│ 0       0       1       ...       0
 ```
 

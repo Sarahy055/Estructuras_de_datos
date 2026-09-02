@@ -455,13 +455,17 @@ Este programa genera nuevamente la matriz con las dimensiones establecidas y ver
 
 # 20. ¿Por qué la matriz puede considerarse de dos dimensiones?
 
-Aunque el archivo físicamente está almacenado de forma secuencial, conceptualmente se interpreta como una matriz mediante sus dimensiones:
-100.000 filas
-100.000 columnas
+La matriz se considera de dos dimensiones porque está organizada explícitamente en 100.000 filas y 100.000 columnas. La estructura del archivo conserva esta organización: cada fila de la matriz se almacena como un bloque independiente de 100.000 bits, seguido por un salto de línea (\n) que funciona como delimitador entre filas.
 
-Cada grupo de: 100.000 bits corresponde a una fila.
+La estructura física del archivo es:
 
-La posición de un elemento puede determinarse mediante su fila y columna.
+[Fila 0: 100.000 bits][\n]
+[Fila 1: 100.000 bits][\n]
+[Fila 2: 100.000 bits][\n]
+...
+[Fila 99999: 100.000 bits][\n]
+
+Por lo tanto, el archivo no contiene una única cadena que represente los 10.000 millones de elementos. Los elementos están organizados en 100.000 grupos correspondientes a las filas, y cada grupo contiene los 100.000 elementos de una fila.
 
 La estructura lógica es:
 
@@ -477,17 +481,13 @@ La estructura lógica es:
 99999│ 0       0       1       ...       0
 ```
 
+Cada elemento se identifica mediante dos posiciones: fila y columna. Por ejemplo, (50000, 50000) identifica un elemento específico de la matriz.
 
-Mientras que físicamente en el disco se encuentra de manera secuencial:
+Además, como todas las filas tienen el mismo tamaño, el programa puede calcular directamente dónde comienza una fila dentro del archivo mediante:
 
-Fila 0
-Fila 1
-Fila 2
-...
-Fila 99999
+posición = número_de_fila × 12.501
 
-La combinación de las dimensiones y el cálculo de posiciones permite interpretar esa secuencia como una matriz.
-
+Los 12.501 bytes corresponden a los 12.500 bytes que contienen los 100.000 bits de la fila más el byte utilizado como delimitador (\n). De esta manera, la organización física del archivo permite mantener la estructura de filas de la matriz y realizar acceso directo a ellas.
 
 # 21. Problemas que resuelve la solución
 

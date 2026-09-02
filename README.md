@@ -288,6 +288,7 @@ El programa no lee toda la matriz.
 
 Lee una fila, obtiene las columnas solicitadas, muestra el resultado y continúa con la siguiente fila.
 
+El archivo se almacena en formato binario para reducir el espacio utilizado. La matriz no se almacena como una cadena de caracteres, sino como bits empaquetados por filas. Para verificar visualmente su contenido se utiliza region_matriz.txt, que muestra las regiones solicitadas de la matriz.
 
 # 13. Ejemplo de extracción de un fragmento
 
@@ -319,13 +320,11 @@ La secuencia de `0` y `1` corresponde a las columnas solicitadas.
 El `1` que aparece después de la segunda barra:
 | 1
 
-
 representa visualmente el salto de línea que delimita esa fila en el archivo.
 
 Es importante aclarar que ese `1` **no es un elemento adicional de la matriz**. Es solamente una representación visual del delimitador de fila.
 
-En el archivo binario el delimitador continúa siendo:
-\n
+En el archivo binario el delimitador continúa siendo: \n
 
 # 14. Archivo `region_matriz.txt`
 
@@ -355,7 +354,6 @@ No se utiliza el TXT para almacenar la matriz completa, ya que hacerlo aumentar�
 La matriz real continúa siendo:
 matriz_100000x100000.bin
 
----
 
 # 15. ¿Cómo solicitar diferentes fragmentos?
 

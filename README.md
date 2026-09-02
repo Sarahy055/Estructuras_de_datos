@@ -423,7 +423,7 @@ Si los tamaños coinciden, se muestra:
 
 De esta manera se puede comprobar que el archivo corresponde a las dimensiones esperadas.
 
-#19. Archivo .gitignore y generación de la matriz
+# 19. Archivo .gitignore y generación de la matriz
 
 El archivo .gitignore se utiliza para indicarle a Git qué archivos no deben ser incluidos ni enviados al repositorio de GitHub. En este proyecto se configuró para ignorar el archivo matriz_100000x100000.bin, debido a que contiene la matriz de 100000 × 100000 y tiene un tamaño aproximado de 1.2 GB, superando el límite permitido para un archivo individual en GitHub.
 La matriz binaria sí se encuentra generada y almacenada localmente en el equipo donde se desarrolla el proyecto. Sin embargo, no se sube al repositorio debido a su gran tamaño. En su lugar, el repositorio contiene el código necesario para generarla nuevamente. Para crear el archivo matriz_100000x100000.bin, basta con ejecutar:
@@ -432,7 +432,7 @@ python crear_matriz.py
 
 Este programa genera nuevamente la matriz con las dimensiones establecidas y verifica que el tamaño del archivo generado coincida con el tamaño esperado. De esta manera, aunque el archivo binario no se encuentre almacenado en GitHub, puede ser reproducido a partir del código incluido en el repositorio.
 
-# 19. Problemas que resuelve la solución
+# 20. Problemas que resuelve la solución
 
 ## Consumo excesivo de RAM
 

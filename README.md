@@ -423,6 +423,28 @@ Si los tamaños coinciden, se muestra:
 
 De esta manera se puede comprobar que el archivo corresponde a las dimensiones esperadas.
 
+- Estructura de las filas y delimitación
+
+La matriz se almacena físicamente en el archivo binario de forma secuencial, pero se interpreta lógicamente como una matriz de dos dimensiones. Cada fila contiene los 100.000 elementos almacenados como bits, ocupando 12.500 bytes, y al final de cada fila se agrega un byte correspondiente al salto de línea \n.
+
+Por lo tanto, cada fila ocupa exactamente 12.501 bytes dentro del archivo:
+
+[12.500 bytes de datos][\n]
+
+Esta estructura permite conocer directamente la posición de cualquier fila sin tener que recorrer todo el archivo. Para acceder a una fila determinada, se calcula su posición mediante:
+
+posición = número_de_fila × 12.501
+
+El programa utiliza seek() para desplazarse directamente hasta esa posición. Después de leer los 12.500 bytes correspondientes a los datos de la fila, lee un byte adicional y verifica que sea \n. De esta manera, además de localizar la fila solicitada, se comprueba que el delimitador se encuentre correctamente ubicado.
+
+Por ejemplo, para acceder a la fila 2:
+
+posición = 2 × 12.501 = 25.002 bytes
+
+El programa se desplaza directamente a esa posición y lee la fila correspondiente, sin necesidad de cargar las filas anteriores en memoria.
+
+Esta estructura permite mantener el archivo físicamente secuencial y, al mismo tiempo, realizar un acceso eficiente a las filas de la matriz.
+
 # 19. Archivo .gitignore y generación de la matriz
 
 El archivo .gitignore se utiliza para indicarle a Git qué archivos no deben ser incluidos ni enviados al repositorio de GitHub. En este proyecto se configuró para ignorar el archivo matriz_100000x100000.bin, debido a que contiene la matriz de 100000 × 100000 y tiene un tamaño aproximado de 1.2 GB, superando el límite permitido para un archivo individual en GitHub.

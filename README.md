@@ -460,9 +460,13 @@ La matriz se considera de dos dimensiones porque está organizada explícitament
 La estructura física del archivo es:
 
 [Fila 0: 100.000 bits][\n]
+
 [Fila 1: 100.000 bits][\n]
+
 [Fila 2: 100.000 bits][\n]
+
 ...
+
 [Fila 99999: 100.000 bits][\n]
 
 Por lo tanto, el archivo no contiene una única cadena que represente los 10.000 millones de elementos. Los elementos están organizados en 100.000 grupos correspondientes a las filas, y cada grupo contiene los 100.000 elementos de una fila.

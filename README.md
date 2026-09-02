@@ -407,22 +407,6 @@ if salto != b"\n":
 
 Esto permite detectar si la estructura esperada del archivo se ha alterado.
 
-
-# 18. Verificación del tamaño
-
-Antes de realizar una lectura, `leer_matriz.py` comprueba que el archivo exista.
-
-Después obtiene su tamaño mediante:
-os.path.getsize(NOMBRE_ARCHIVO)
-
-y lo compara con:
-1.250.100.000 bytes
-
-Si los tamaños coinciden, se muestra:
- "El tamaño del archivo es correcto."
-
-De esta manera se puede comprobar que el archivo corresponde a las dimensiones esperadas.
-
 - Estructura de las filas y delimitación
 
 La matriz se almacena físicamente en el archivo binario de forma secuencial, pero se interpreta lógicamente como una matriz de dos dimensiones. Cada fila contiene los 100.000 elementos almacenados como bits, ocupando 12.500 bytes, y al final de cada fila se agrega un byte correspondiente al salto de línea \n.
@@ -444,6 +428,21 @@ posición = 2 × 12.501 = 25.002 bytes
 El programa se desplaza directamente a esa posición y lee la fila correspondiente, sin necesidad de cargar las filas anteriores en memoria.
 
 Esta estructura permite mantener el archivo físicamente secuencial y, al mismo tiempo, realizar un acceso eficiente a las filas de la matriz.
+
+# 18. Verificación del tamaño
+
+Antes de realizar una lectura, `leer_matriz.py` comprueba que el archivo exista.
+
+Después obtiene su tamaño mediante:
+os.path.getsize(NOMBRE_ARCHIVO)
+
+y lo compara con:
+1.250.100.000 bytes
+
+Si los tamaños coinciden, se muestra:
+ "El tamaño del archivo es correcto."
+
+De esta manera se puede comprobar que el archivo corresponde a las dimensiones esperadas.
 
 # 19. Archivo .gitignore y generación de la matriz
 

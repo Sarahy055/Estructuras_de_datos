@@ -1,0 +1,20 @@
+ Ábol de MERKLE
+
+                             RAÍZ
+                          /       \
+                        /           \
+                     H1234           H5555
+                    /     \          /    \
+                  /        \        /       \ 
+                H12       H34      H55     H55
+               /   \     /   \    /   \    
+             H1    H2   H3   H4  H5   H5
+             |     |    |    |   |     |
+            TX1   TX2  TX3  TX4 TX5   TX5
+
+
+TX1 = Sara paga 15
+TX2 = Juan paga 20
+TX3 = Mateo paga 30
+TX4 = Ana paga 25
+TX5 = Alejandra paga 10

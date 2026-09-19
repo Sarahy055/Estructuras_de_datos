@@ -17,13 +17,19 @@ La implementación también incluye la generación y verificación de una pruena
 - Biblioteca estándar hashlib
 - algoritmo de hash SHA-256
 
-#Diagrama del ábol Merkel:
-El diagrmaa del Árbol de Merkle construido durante el laboratorio se realizó de manera manual y se encuentra en el archivo: 
+# Diagrama del ábol Merkel:
+El diagrmaa del Árbol de Merkle construido durante el laboratorio se realizó de manera manual y se encuentra en el archivo, incluido en este repositorio en la carpeta laboratorio 2: 
 
 "arbol.txt"
 
-El archivo muestra la estrucutra jerárquica del árbol incluyendo:
+El diagrama representa la estructura completa del árbol utilizado en el experimento, desde las transacciones orginales hasta la Merkle Root
 
+La estructura representada es:
+- H1,H2,H3,H4 y H5: hashes SHA-256 de las cinco transacciones.
+- H5: se duplica debido que inicialmente exiten 5 hojas (número impar).
+- H12, H34 y H55: hashes obtenidos al concatenar los hashes de sus respectivos hijos y aplicar SHA-256.
+- H1234 y H5555: hashes de los niveles superiores.
+- RAÍZ: hash final que representa todo el conjunto de transacciones.
 
 
 # Función hash 

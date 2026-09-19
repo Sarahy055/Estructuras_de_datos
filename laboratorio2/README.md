@@ -43,7 +43,7 @@ Esta función recibe un texto, lo convierte a bytes mediante "encode()" y calcul
 
 El resultado es una cadena hexadecimal de 64 caracteres. 
 
-# Transacciones utlizadas
+# Transacciones utilizadas
 Para el experimento se utilizaron cinco transacciones simuladas manualmente:
 
 
@@ -57,7 +57,7 @@ tx4: Ana paga 25
 
 tx5: Alejandra paga 10 
 
-Cada una de estas transacciones se convierte en una hoa de Árbol de Merkle mediante SHA-256. Y como tiene 5 hojas (impar), la quinta hoja se duplica para poder construir el siguiente nivel. 
+Cada una de estas transacciones se convierte en una hoja de Árbol de Merkle mediante SHA-256. Y como tiene 5 hojas (impar), la quinta hoja se duplica para poder construir el siguiente nivel. 
 
 # Construcción del árbol:
 La función encargada de construir los diferentes niveles fue:
@@ -83,7 +83,7 @@ def construir_niveles(hojas):
 El algoritmo funciona de la siguiente manera:
 
 Primero recibe la lista de hashes de las hojas, luego comprueba si el número de nodos es impar, si es impar y todavía no se ha llegado a la raíz, duplica el último nodo.
-Guarda el nivel actual, luego ombina los hahes de dos en dos.
+Guarda el nivel actual, luego combina los hashes de dos en dos.
 Calcula el SHA-256 de cada concatenación. Y se repite este proceso hasta obtener un único hash.
 
 # Obtención de la Merkle Root
@@ -115,20 +115,20 @@ print("¿La raíz ha cambiado?", raiz != raiz_mod)
 El resultado esperado fue:
 ¿La raíz ha cambiado? -> True
 
-Esto demuestra que un cambio en una sola transacción se porpaga por los diferentes niveles del árbol hasta modificar la Merkle Root.
+Esto demuestra que un cambio en una sola transacción se propaga por los diferentes niveles del árbol hasta modificar la Merkle Root.
 
 ## 2) prueba inclusión:
 Esta prueba permite demostrar que una determinada transacción pertenece al Árbol de Merkle sin tener que proporcionar todas las transacciones. La prueba se genera sobre la transacción 3:
 
 tx3: Mateo paga 30
 
-y corresponde al índice:
+Y corresponde al índice:
 indice_tx3 = 2
 
 La prueba se genera mediante: 
 prueba_inclusion = generar_prueba(hojas, indice_tx3)
 
-La función obtiene el hash necesario para cada nivel y su posición. Esto permite reconstruir el camino desde la hoa hasta la raíz.
+La función obtiene el hash necesario para cada nivel y su posición. Esto permite reconstruir el camino desde la hoja hasta la raíz.
 
 ## 3) Verificación de la prueba inclusión
 La prueba se verifica utilizando: 
@@ -201,12 +201,12 @@ El código fue revisado y ejecutado para comprobar su funcionamiento. La AI gene
 
 La implementaciín permite construir un árbol de merkle a partir de 5 transacciones utilizando SHA-256.
 
-Los resultados muestrna que:
+Los resultados muestra que:
 1. Las transacciones pueden representarse mediante hashes.
-2. Los hashes pueden combianrse de forma jerárquica hasta obtener una única Merkle Root.
+2. Los hashes pueden combinarse de forma jerárquica hasta obtener una única Merkle Root.
 3. Cuando existe un número impar de nodos, el último se duplica para continuar la construcción.
 4. Una modificación en una transacción provica un cambio en la Merkle Root.
 5. Es posible generar una prueba de inclusión para demostrar que una transacción pertenece al árbol.
 6. La prueba falla cuando se intenta verificar con un dato diferente.
 
-De esta manera, el laboratorio permite observar de forma práctiva cómo los Árboles de Merkle proporcionan una forma eficiente de representar y verfificar la integridad de un conjunto de datos.
+De esta manera, el laboratorio permite observar de forma práctica cómo los Árboles de Merkle proporcionan una forma eficiente de representar y verfificar la integridad de un conjunto de datos.

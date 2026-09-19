@@ -6,7 +6,7 @@ Lenguaje utilizado: Python
 
 # Descripción: 
 
-En este laboratorio se implementa un Ábol de merkle, iutilizando python y la función hash criptográfica SHA-256.
+En este laboratorio se implementa un Árbol de merkle, iutilizando python y la función hash criptográfica SHA-256.
 
 El objetivo es construir una estructura que permita representar un conjunto de datos mediante una única raíz, denominada Merkle Proof y comporbar cómo cualquier modificación en los datos originales produce un cambio en la raíz.
 

@@ -1,4 +1,4 @@
- Ábol de MERKLE
+ Árbol de Merkle
 
                              RAÍZ
                           /       \
@@ -13,8 +13,8 @@
             TX1   TX2  TX3  TX4 TX5   TX5
 
 
-TX1 = Sara paga 15
-TX2 = Juan paga 20
-TX3 = Mateo paga 30
-TX4 = Ana paga 25
-TX5 = Alejandra paga 10
+"tx1 = Sara paga 15"
+"tx2 = Juan paga 20"
+"tx3 = Mateo paga 30"
+"tx4 = Ana paga 25"
+"tx5 = Alejandra paga 10"

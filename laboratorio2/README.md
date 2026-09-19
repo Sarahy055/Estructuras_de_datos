@@ -24,6 +24,10 @@ El diagrmaa del Árbol de Merkle construido durante el laboratorio se realizó d
 
 El diagrama representa la estructura completa del árbol utilizado en el experimento, desde las transacciones orginales hasta la Merkle Root
 
+- Captura del árbol que se encuentra en :`arbol.txt`
+<img width="583" height="429" alt="Captura de pantalla 2026-09-19 154351" src="https://github.com/user-attachments/assets/ca605a07-896d-4978-9693-ac40a708a76c" />
+
+
 La estructura representada es:
 - H1,H2,H3,H4 y H5: hashes SHA-256 de las cinco transacciones.
 - H5: se duplica debido que inicialmente exiten 5 hojas (número impar).

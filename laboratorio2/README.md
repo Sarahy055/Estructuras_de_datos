@@ -1,8 +1,8 @@
 # Laboratorio 2: Árbol de Merkle.
 
-## Estudiante: Sarahy Paulina Cardales Acevedo CC: 1062963790
+Estudiante: Sarahy Paulina Cardales Acevedo CC: 1062963790
 
-# Lenguaje utilizado: Python
+Lenguaje utilizado: Python
 
 # Descripción: 
 

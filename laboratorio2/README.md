@@ -34,7 +34,9 @@ La estructura representada es:
 
 # Función hash 
 La función utilizada para calcular las hashes es:
+
 def h(texto):
+
   return hashlib.sha256(texto.encade()).hexdigest()
 
 Esta función recibe un texto, lo convierte a bytes mediante "encode()" y calcula su hash utilizando SHA-256.

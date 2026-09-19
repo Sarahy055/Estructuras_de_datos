@@ -186,7 +186,7 @@ Para este laboratorio se adopta el código de honor académico:
 
 https://www-hbs-edu.translate.goog/mba/handbook/standards-of-conduct/academic/honor-code?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc&_x_tr_hist=true
 
-El trabajo se realiza teniedno en cuenta los principios de honestidad académica y responsabilidad sobre el contenido entregado.
+El trabajo se realiza teniendo en cuenta los principios de honestidad académica y responsabilidad sobre el contenido entregado.
 
 Se utilizó la herramienta IA como apoyo durante el desarrollo de esta actividad.
 
@@ -195,7 +195,7 @@ El uso estuvo orientado a:
 - Comprender el funcionamiento de las pruebas de inclusión
 - Recibir orientación sobre la estructura del código. 
 
-El código fue revisado y ejecutado para comprobar su funcionamiento. La Ai generativa se utiizó como apoyo para este laboratorio. 
+El código fue revisado y ejecutado para comprobar su funcionamiento. La AI generativa se utilizó como apoyo para este laboratorio. 
 
 # Conclusión:
 

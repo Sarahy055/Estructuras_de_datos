@@ -44,10 +44,15 @@ El resultado es una cadena hexadecimal de 64 caracteres.
 # Transacciones utlizadas
 Para el experimento se utilizaron cinco transacciones simuladas manualmente:
 
+
 tx1: Sara paga 15 
+
 tx2: Juan paga 20
+
 tx3: Mateo paga 30
+
 tx4: Ana paga 25
+
 tx5: Alejandra paga 10 
 
 Cada una de estas transacciones se convierte en una hoa de Árbol de Merkle mediante SHA-256. Y como tiene 5 hojas (impar), la quinta hoja se duplica para poder construir el siguiente nivel. 

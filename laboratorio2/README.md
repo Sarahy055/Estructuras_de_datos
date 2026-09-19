@@ -56,6 +56,7 @@ Cada una de estas transacciones se convierte en una hoa de Árbol de Merkle medi
 La función encargada de construir los diferentes niveles fue:
   
 def construir_niveles(hojas):
+
     niveles = []
     nivel_actual = hojas
     

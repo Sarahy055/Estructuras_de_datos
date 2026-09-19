@@ -54,7 +54,7 @@ Cada una de estas transacciones se convierte en una hoa de Árbol de Merkle medi
 
 # Construcción del árbol:
 La función encargada de construir los diferentes niveles fue:
-
+  
 def construir_niveles(hojas):
     niveles = []
     nivel_actual = hojas
@@ -194,7 +194,7 @@ El código fue revisado y ejecutado para comprobar su funcionamiento. La Ai gene
 La implementaciín permite construir un árbol de merkle a partir de 5 transacciones utilizando SHA-256.
 
 Los resultados muestrna que:
-1. Las transacciones pueden representarse mediante haashes.
+1. Las transacciones pueden representarse mediante hashes.
 2. Los hashes pueden combianrse de forma jerárquica hasta obtener una única Merkle Root.
 3. Cuando existe un número impar de nodos, el último se duplica para continuar la construcción.
 4. Una modificación en una transacción provica un cambio en la Merkle Root.

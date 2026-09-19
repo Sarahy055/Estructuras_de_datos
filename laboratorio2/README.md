@@ -20,7 +20,7 @@ La implementación también incluye la generación y verificación de una pruena
 # Diagrama del ábol Merkel:
 El diagrmaa del Árbol de Merkle construido durante el laboratorio se realizó de manera manual y se encuentra en el archivo, incluido en este repositorio en la carpeta laboratorio 2: 
 
-'arbol.txt'
+`arbol.txt`
 
 El diagrama representa la estructura completa del árbol utilizado en el experimento, desde las transacciones orginales hasta la Merkle Root
 

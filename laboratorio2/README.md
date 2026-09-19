@@ -1,9 +1,10 @@
-#Laboratorio 2: Árbol de Merkle.
+# Laboratorio 2: Árbol de Merkle.
 
-##Estudiante: Sarahy Paulina Cardales Acevedo CC: 1062963790
-#Lenguaje utilizado: Python
+## Estudiante: Sarahy Paulina Cardales Acevedo CC: 1062963790
 
-#Descripción: 
+# Lenguaje utilizado: Python
+
+# Descripción: 
 
 En este laboratorio se implementa un Ábol de merkle, iutilizando python y la función hash criptográfica SHA-256.
 
@@ -17,7 +18,13 @@ La implementación también incluye la generación y verificación de una pruena
 - algoritmo de hash SHA-256
 
 #Diagrama del ábol Merkel:
-Este está contruido manualmente en el archivo llamado"arbol.txt" y tiene inicialmente 5 transacciones. Como el número de hojas impar, se duplica la quinta hoja. 
+El diagrmaa del Árbol de Merkle construido durante el laboratorio se realizó de manera manual y se encuentra en el archivo: 
+
+"arbol.txt"
+
+El archivo muestra la estrucutra jerárquica del árbol incluyendo:
+
+
 
 # Función hash 
 La función utilizada para calcular las hashes es:
